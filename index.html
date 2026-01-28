@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Linovi A.Ş. — Website Under Construction</title>
+  <meta name="description" content="Linovi A.Ş. official website. Under construction. Contact: support@linovi.com" />
+  <style>
+    :root{
+      --bg: #0b1020;
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.72);
+      --border: rgba(255,255,255,0.14);
+      --accent: #7aa7ff;
+    }
+    *{ box-sizing: border-box; }
+    html,body{ height: 100%; margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+    body{
+      background: radial-gradient(1200px 800px at 20% 10%, rgba(122,167,255,0.18), transparent 60%),
+                  radial-gradient(900px 600px at 80% 30%, rgba(110,231,183,0.10), transparent 55%),
+                  var(--bg);
+      color: var(--text);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .wrap{
+      width: 100%;
+      max-width: 900px;
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+    }
+    header{
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    .logo{
+      width: 46px; height: 46px;
+      border-radius: 12px;
+      background: rgba(122,167,255,0.18);
+      border: 1px solid rgba(122,167,255,0.35);
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: 0.5px;
+      user-select: none;
+    }
+    h1{ font-size: 22px; margin: 0; }
+    p{ margin: 10px 0; color: var(--muted); line-height: 1.55; }
+    .grid{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 18px;
+    }
+    @media (min-width: 720px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+    .panel{
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.03);
+      border-radius: 16px;
+      padding: 16px;
+    }
+    .panel h2{
+      font-size: 15px;
+      margin: 0 0 8px;
+      color: rgba(255,255,255,0.88);
+    }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+    footer{
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-between;
+      align-items: center;
+      color: rgba(255,255,255,0.55);
+      font-size: 12px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 14px;
+    }
+    .small{ font-size: 12px; color: rgba(255,255,255,0.62); }
+  </style>
+</head>
+<body>
+  <main class="wrap" role="main" aria-label="Linovi A.Ş. website under construction">
+    <header>
+      <div class="logo" aria-hidden="true">L</div>
+      <div>
+        <h1>Linovi A.Ş.</h1>
+        <p class="small">Official website — currently being updated.</p>
+      </div>
+    </header>
+
+    <p>
+      Our website is under construction while we prepare a full launch.
+      For any questions related to our apps, support, or business inquiries, please contact us below.
+    </p>
+    <p class="small">
+      TR: Web sitemiz güncellenmektedir. Uygulama desteği ve diğer talepler için aşağıdaki e-posta adresinden bize ulaşabilirsiniz.
+    </p>
+
+    <section class="grid" aria-label="Contact and support">
+      <div class="panel">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:support@linovi.com">support@linovi.com</a></p>
+      </div>
+
+      <div class="panel">
+        <h2>App Support</h2>
+        <p>
+          If you need help with an app, billing, or account requests, email
+          <a href="mailto:support@linovi.com">support@linovi.com</a>.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Linovi A.Ş. All rights reserved.</div>
+      <div class="small">Last updated: <span id="date"></span></div>
+    </footer>
+  </main>
+
+  <script>
+    const now = new Date();
+    document.getElementById("year").textContent = now.getFullYear();
+    document.getElementById("date").textContent = now.toISOString().slice(0, 10);
+  </script>
+</body>
+</html>
